@@ -39,7 +39,7 @@ The headline stays **MORE THAN A CUT.** The story underneath uses BLEND's own wo
 
 | Chapter | Purpose | Content |
 |---|---|---|
-| First impression | Who, what, why, and how to book, in one screen | Full-bleed client portrait in front of the wall, **More than / *a cut.***, one line of facts (cuts, shaves, facials, Grove Street, six barbers, 6 to 20+ years), Book a chair, 5.0 on Google, first visit from $40 |
+| First impression | Who, what, why, and how to book, in one screen | Full-bleed client portrait in front of the wall, **More than / *a cut.***, then one line built from what reviewers praise most: "Upstairs on Grove Street, nobody rushes you. Your barber listens first, sweats the details, and sends you out sharper than you walked in." Book a chair, 5.0 on Google, first visit from $40 |
 | 01 The Experience | The craft and the atmosphere | Four cards that pin and stack as you scroll: **The Craft** (3-day touch-up guarantee), **The Room** ("no sense of rush", from a review), **The Ritual** (the full service, set in type), **The Transformation** (the consultation add-on) |
 | 02 The Barbers | The people | Swipeable portrait cards: name, years, title, specialty in their own words, one line of personality, and "Book with [name]" |
 | 03 Services | Comparing services | First-visit card with honest fine print; category tabs (Cuts / Beard / Spa / Add-ons); expandable rows with a one-tap "Book this" |
@@ -74,7 +74,7 @@ The headline stays **MORE THAN A CUT.** The story underneath uses BLEND's own wo
 Signature mobile moments:
 1. **Cinematic hero.** It loads instantly, with no intro or splash. The photo drifts and scales slightly as you scroll, and the headline fades up and away.
 2. **Stacking experience cards.** Pure `position: sticky`: each chapter card pins and the next slides over it, while the one behind recedes. Native scrolling, no hijacking.
-3. **Swipeable barbers.** Scroll-snap cards with a progress rail and counter, plus previous and next buttons for desktop and keyboard users.
+3. **Swipeable barbers.** Scroll-snap cards with a progress rail and counter, plus previous and next buttons for desktop and keyboard users. Each swipe stops on the next barber (`scroll-snap-stop: always`) instead of flinging past several, and all six portraits are fetched about two screens before the rail so swiping never waits on an image.
 4. **The booking sheet ("Book" mode).** A native-feeling bottom sheet you can swipe down to dismiss. It opens from the header's Book button, the hero, any barber card or the closing chapter.
    - It lists the five most-booked services with prices, each deep-linked to Square.
    - A barber chip row switches every link to that barber's calendar (`team_member_id`).
@@ -149,6 +149,7 @@ Motion rules:
 6. **Barbers**: confirm the six-barber roster (Dre appears on Instagram but isn't in Square), how "Eddie" and "Danny R" want to be named, and who cut which gallery photos.
 7. **Headline**: approve "MORE THAN A CUT." (the brief's line, not BLEND's), and lines written for the concept:
    - "conversation that makes the hour go fast"
+   - The hero line "Upstairs on Grove Street, nobody rushes you. Your barber listens first, sweats the details, and sends you out sharper than you walked in." (drawn from review themes: "no sense of rush", barbers who "listen", detail, confidence)
    - "Plants in the windows, music on"
    - "Six chairs. 75+ years between them." (the sum of the barbers' listed years)
 8. **Reviews**: permission to quote reviewers, and a fresh export (the widget feed stops at Jan 2026).

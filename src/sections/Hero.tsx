@@ -41,8 +41,9 @@ export function Hero() {
             a cut.
           </span>
         </h1>
-        <p className="mt-5 max-w-[34ch] text-[1.0625rem] leading-snug text-plaster/85 lg:mt-7 lg:text-xl">
-          Precision cuts, hot towel shaves and facials, one flight up from Grove Street. Six barbers, 6 to 20+ years each.
+        {/* Leads with what reviewers keep praising (unhurried, they listen, the detail), not a service list. */}
+        <p className="mt-5 max-w-[32ch] text-[1.1875rem] leading-snug text-plaster/90 lg:mt-7 lg:text-[1.375rem]">
+          Upstairs on Grove Street, nobody rushes you. Your barber listens first, sweats the details, and sends you out sharper than you walked in.
         </p>
         <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-4">
           <button onClick={() => book()} className="press label flex h-14 items-center gap-3 rounded-full bg-plaster px-7 text-ink hover:bg-white">
