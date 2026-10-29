@@ -8,6 +8,16 @@ export function Barbers() {
   const book = useBooking()
   const rail = useRef<HTMLOListElement>(null)
   const [active, setActive] = useState(0)
+  const section = useRef<HTMLElement>(null)
+  const [near, setNear] = useState(false)
+
+  // Fetch and decode every portrait before the visitor reaches the rail, so swiping never
+  // waits on an image (lazy loading inside horizontal scrollers kicks in late on iOS).
+  useEffect(() => {
+    const io = new IntersectionObserver(([e]) => e.isIntersecting && setNear(true), { rootMargin: '150% 0px' })
+    io.observe(section.current!)
+    return () => io.disconnect()
+  }, [])
 
   useEffect(() => {
     const el = rail.current!
@@ -32,7 +42,7 @@ export function Barbers() {
   }
 
   return (
-    <section id="barbers" aria-labelledby="barbers-title" className="grain relative overflow-hidden bg-ink pt-24 pb-24 text-plaster lg:pt-36 lg:pb-36">
+    <section ref={section} id="barbers" aria-labelledby="barbers-title" className="grain relative overflow-hidden bg-ink pt-24 pb-24 text-plaster lg:pt-36 lg:pb-36">
       <div className="mx-auto max-w-[1440px] px-5 lg:px-10">
         <p className="label reveal text-fog">02 — The Barbers</p>
         <div className="mt-5 flex flex-wrap items-end justify-between gap-8">
@@ -51,10 +61,11 @@ export function Barbers() {
         className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-3 overflow-x-auto overscroll-x-contain scroll-px-5 px-5 pb-2 lg:mt-16 lg:scroll-px-10 lg:px-10"
       >
         {barbers.map((b, i) => (
-          <li key={b.key} className="w-[82vw] max-w-[380px] shrink-0 snap-start" aria-label={`${b.name}, ${i + 1} of ${barbers.length}`}>
+          <li key={b.key} className="w-[82vw] max-w-[380px] shrink-0 snap-start snap-always" aria-label={`${b.name}, ${i + 1} of ${barbers.length}`}>
             <article className="flex h-full flex-col">
               <div className="relative aspect-[3/4] overflow-hidden rounded-[24px] bg-ink-soft">
                 <Img
+                  eager={near}
                   id={b.image}
                   alt={`Portrait of ${b.name}`}
                   sizes="(min-width: 480px) 380px, 82vw"
@@ -91,8 +102,8 @@ export function Barbers() {
         </p>
         <div className="h-px flex-1 bg-plaster/15" aria-hidden>
           <div
-            className="h-px bg-plaster transition-[width] duration-300"
-            style={{ width: `${((active + 1) / barbers.length) * 100}%` }}
+            className="h-px origin-left bg-plaster transition-transform duration-300 ease-out-soft"
+            style={{ transform: `scaleX(${(active + 1) / barbers.length})` }}
           />
         </div>
         <div className="flex gap-2">
