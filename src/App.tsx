@@ -1,8 +1,8 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useState } from 'react'
 import type { Barber } from './data/blend'
 import { BookingContext } from './components/booking'
 import { BookingSheet } from './components/BookingSheet'
-import { Dock, Header, Menu } from './components/Chrome'
+import { Header, Menu } from './components/Chrome'
 import { Hero } from './sections/Hero'
 import { Experience } from './sections/Experience'
 import { Barbers } from './sections/Barbers'
@@ -13,25 +13,8 @@ import { Footer, Series, Visit } from './sections/Visit'
 export default function App() {
   const [sheet, setSheet] = useState<{ open: boolean; barber?: Barber }>({ open: false })
   const [menu, setMenu] = useState(false)
-  const [pastHero, setPastHero] = useState(false)
-  const [visitInView, setVisitInView] = useState(false)
-  const visitCta = useRef<HTMLDivElement>(null)
 
   const book = useCallback((barber?: Barber) => setSheet({ open: true, barber }), [])
-
-  // The dock appears once the hero's own booking button has scrolled away,
-  // and steps aside when the closing "Book a chair" is on screen.
-  useEffect(() => {
-    const on = () => setPastHero(window.scrollY > window.innerHeight * 0.45)
-    on()
-    window.addEventListener('scroll', on, { passive: true })
-    const io = new IntersectionObserver(([e]) => setVisitInView(e.isIntersecting))
-    io.observe(visitCta.current!)
-    return () => {
-      window.removeEventListener('scroll', on)
-      io.disconnect()
-    }
-  }, [])
 
   return (
     <BookingContext.Provider value={book}>
@@ -46,10 +29,9 @@ export default function App() {
         <Services />
         <Work />
         <Series />
-        <Visit ref={visitCta} />
+        <Visit />
       </main>
       <Footer />
-      <Dock hidden={!pastHero || visitInView || sheet.open || menu} />
       <Menu open={menu} onClose={() => setMenu(false)} />
       <BookingSheet
         open={sheet.open}

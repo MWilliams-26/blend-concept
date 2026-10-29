@@ -75,12 +75,12 @@ Signature mobile moments:
 1. **Cinematic hero.** It loads instantly, with no intro or splash. The photo drifts and scales slightly as you scroll, and the headline fades up and away.
 2. **Stacking experience cards.** Pure `position: sticky`: each chapter card pins and the next slides over it, while the one behind recedes. Native scrolling, no hijacking.
 3. **Swipeable barbers.** Scroll-snap cards with a progress rail and counter, plus previous and next buttons for desktop and keyboard users.
-4. **The booking sheet ("Book" mode).** A native-feeling bottom sheet you can swipe down to dismiss. It opens from the persistent dock, the hero, any barber card or the closing chapter.
+4. **The booking sheet ("Book" mode).** A native-feeling bottom sheet you can swipe down to dismiss. It opens from the header's Book button, the hero, any barber card or the closing chapter.
    - It lists the five most-booked services with prices, each deep-linked to Square.
    - A barber chip row switches every link to that barber's calendar (`team_member_id`).
    - Only the service list scrolls; "All services on Square", Call, Text and Directions stay pinned at the bottom, sized to the visible viewport (`dvh`) so phone toolbars can't hide them.
 5. **The portrait wall.** Alternate columns drift against the scroll; tap any portrait for a full-screen, swipeable, keyboard-navigable viewer.
-6. **Persistent dock.** "Book a chair · Six barbers · open daily 9–9". It appears once the hero's own button has scrolled away and steps aside when the closing "Book a chair" is on screen, so booking is always one tap away without stacking repeated buttons.
+6. **Book in the header.** A compact "Book" pill sits in the header on every screen ("Book a chair" on desktop), so booking is always one tap away without covering content. An earlier floating bottom bar was removed after review because it got in the way of scrolling on phones.
 
 Motion rules:
 - Scroll-linked effects use CSS scroll-driven animations (`animation-timeline`), which animate only transform and opacity. They need no JavaScript and fall back to static layouts.
@@ -90,7 +90,7 @@ Motion rules:
 
 ## Booking and conversion strategy
 
-- **Explore or book, never forced.** Every chapter can be skipped. Booking is reachable from the first screen, the dock, the menu and every barber.
+- **Explore or book, never forced.** Every chapter can be skipped. Booking is reachable from the header on every screen, the hero, the menu and every barber.
 - **Returning clients**: "Book with Eric" goes straight to Eric's calendar (verified for all six barbers) in about 3 taps, against about 6 today.
 - **First-timers**: a dedicated $40 card that states the scissor-cut exclusion and the 20% gratuity up front.
 - **Comparison shoppers**: real starting prices, durations and descriptions without leaving the page.
@@ -106,13 +106,13 @@ Motion rules:
   - The menu button was unreadable on the bright desktop photo; the header now has a scrim.
 - **Booking links**: all 12 service URLs open the matching Square service. All six `team_member_id` links open availability "with [barber]". No booking was submitted.
 - **Interactions**:
-  - Dock opens the sheet; barber chips update the title and links.
+  - The header Book button opens the sheet; barber chips update the title and links.
   - Swipe-down dismisses the sheet; Esc and backdrop clicks close it, and focus returns to the trigger.
   - The menu jumps to the chosen chapter after closing.
   - Service tabs respond to arrow keys; rows expand with `aria-expanded`.
   - Barber rail counter tracks swipes; the lightbox opens at the tapped photo and advances by swipe, buttons or arrow keys.
   - The mobile flow was recorded and reviewed (`.amp/in/artifacts/mobile-flow.webm`, not committed).
-- **Keyboard**: skip link first, then logo, chapters, booking and barber buttons in order, with a visible ember focus ring. The hidden dock is `inert`.
+- **Keyboard**: skip link first, then logo, chapters, booking and barber buttons in order, with a visible ember focus ring.
 - **Reduced motion**: with emulated `prefers-reduced-motion`, scroll animations compute to `none`, scroll behaviour is `auto`, and the sheet animates in 1 ms.
 - **Lighthouse 13.6** (same profiles as the current-site audit, 2 runs each, production build served locally):
 

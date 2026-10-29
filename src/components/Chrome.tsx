@@ -49,11 +49,12 @@ export function Header({ onMenu }: { onMenu: () => void }) {
           </ul>
         </nav>
         <div className="flex items-center gap-2">
-          <button onClick={() => book()} className="press label hidden h-11 items-center gap-2 rounded-full bg-plaster px-5 whitespace-nowrap text-ink hover:bg-white lg:flex">
-            Book a chair <Arrow className="size-4" />
+          {/* Booking lives in the header so it is always one tap away without covering content. */}
+          <button onClick={() => book()} aria-label="Book a chair" className="press label flex h-10 items-center gap-2 rounded-full bg-plaster px-4 whitespace-nowrap text-ink hover:bg-white lg:h-11 lg:px-5">
+            Book<span className="hidden lg:inline"> a chair</span> <Arrow className="hidden size-4 sm:block" />
           </button>
-          <button onClick={onMenu} className="press label flex h-11 items-center gap-3 rounded-full px-3 xl:hidden" aria-label="Open menu">
-            Menu
+          <button onClick={onMenu} className="press label flex h-11 items-center gap-3 rounded-full pr-1 pl-3 xl:hidden" aria-label="Open menu">
+            <span className="max-[379px]:hidden">Menu</span>
             <span className="flex w-5 flex-col gap-[5px]" aria-hidden>
               <span className="h-px bg-current" />
               <span className="h-px bg-current" />
@@ -117,31 +118,5 @@ export function Menu({ open, onClose }: { open: boolean; onClose: () => void }) 
         </div>
       </div>
     </Dialog>
-  )
-}
-
-/** Persistent mobile booking action. Hidden while another booking button is on screen. */
-export function Dock({ hidden }: { hidden: boolean }) {
-  const book = useBooking()
-  return (
-    <div
-      className={`fixed inset-x-0 bottom-0 z-30 px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] transition-[transform,opacity] duration-500 ease-out-soft lg:hidden ${
-        hidden ? 'pointer-events-none translate-y-[130%] opacity-0' : ''
-      }`}
-      inert={hidden}
-    >
-      <button
-        onClick={() => book()}
-        className="press mx-auto flex h-16 w-full max-w-md items-center justify-between rounded-full bg-ink/90 pr-2 pl-6 text-left text-plaster shadow-[0_12px_40px_-8px_rgb(0_0_0/0.5)] ring-1 ring-plaster/10 backdrop-blur-xl"
-      >
-        <span>
-          <span className="label block">Book a chair</span>
-          <span className="mt-0.5 block text-[0.8125rem] text-fog">Six barbers · open daily 9–9</span>
-        </span>
-        <span className="grid size-12 place-items-center rounded-full bg-plaster text-ink">
-          <Arrow className="size-5" />
-        </span>
-      </button>
-    </div>
   )
 }

@@ -1,4 +1,3 @@
-import { forwardRef } from 'react'
 import { blend } from '../data/blend'
 import { useBooking } from '../components/booking'
 import { Img } from '../components/Img'
@@ -35,7 +34,7 @@ export function Series() {
   )
 }
 
-export const Visit = forwardRef<HTMLDivElement>(function Visit(_, ctaRef) {
+export function Visit() {
   const book = useBooking()
   return (
     <section id="visit" aria-labelledby="visit-title" className="wall grain px-5 pt-24 pb-16 lg:px-10 lg:pt-36 lg:pb-24">
@@ -47,7 +46,7 @@ export const Visit = forwardRef<HTMLDivElement>(function Visit(_, ctaRef) {
               Your chair <br />
               <em>is waiting.</em>
             </h2>
-            <div ref={ctaRef} className="reveal mt-10 flex flex-col gap-3 sm:flex-row">
+            <div className="reveal mt-10 flex flex-col gap-3 sm:flex-row">
               <button onClick={() => book()} className="press label flex h-16 items-center justify-center gap-3 rounded-full bg-ink px-9 text-plaster hover:bg-ink-soft">
                 Book a chair <Arrow className="size-4" />
               </button>
@@ -114,11 +113,11 @@ export const Visit = forwardRef<HTMLDivElement>(function Visit(_, ctaRef) {
       </div>
     </section>
   )
-})
+}
 
 export function Footer() {
   return (
-    <footer className="bg-ink px-5 pt-16 pb-[calc(env(safe-area-inset-bottom)+7rem)] text-plaster lg:px-10 lg:pb-12">
+    <footer className="bg-ink px-5 pt-16 pb-[calc(env(safe-area-inset-bottom)+3rem)] text-plaster lg:px-10 lg:pb-12">
       <div className="mx-auto max-w-[1440px]">
         <Logo full className="w-[min(100%,560px)] text-plaster" />
         <div className="mt-12 flex flex-col gap-4 border-t border-plaster/10 pt-6 text-sm text-fog lg:flex-row lg:justify-between">
