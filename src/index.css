@@ -1,0 +1,178 @@
+@import 'tailwindcss';
+
+/* Latin subsets only, self-hosted and preloaded in index.html (OFL licences in public/fonts). */
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/instrument-serif-latin-400-normal.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  src: url('/fonts/instrument-serif-latin-400-italic.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Archivo Variable';
+  src: url('/fonts/archivo-latin-wdth-normal.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+}
+
+@theme {
+  --color-plaster: #e6e0d6;
+  --color-plaster-hi: #f2ede5;
+  --color-plaster-lo: #d4ccbe;
+  --color-ink: #141312;
+  --color-ink-soft: #24221f;
+  --color-mute: #5d584f;
+  --color-fog: #a59e92;
+  --color-taupe: #cbc2ad;
+  --color-ember: #b5512c;
+
+  --font-display: 'Instrument Serif', 'Times New Roman', serif;
+  --font-sans: 'Archivo Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    background: var(--color-ink);
+    color: var(--color-ink);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    scroll-padding-top: 4.5rem;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-plaster);
+    overflow-x: clip;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-ember);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  dialog { color: inherit; }
+  dialog::backdrop { background: transparent; }
+  html:has(dialog[open]) { overflow: hidden; }
+}
+
+@layer components {
+  /* Wide, tracked caps: echoes the spaced B L E N D wordmark. */
+  .label {
+    font-family: var(--font-sans);
+    font-stretch: 125%;
+    font-weight: 600;
+    font-size: 0.6875rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+  }
+  /* Raised plaster letters, like the BLEND sign on the shop wall. */
+  .emboss {
+    color: var(--color-plaster);
+    text-shadow:
+      -1px -1px 0 rgb(255 255 255 / 0.7),
+      2px 3px 5px rgb(70 55 40 / 0.22);
+  }
+  .grain {
+    position: relative;
+    isolation: isolate;
+  }
+  .grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .24 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* Soft plaster light falloff, like the gallery's wall. */
+  .wall {
+    background:
+      radial-gradient(120% 70% at 20% 0%, var(--color-plaster-hi), transparent 60%),
+      radial-gradient(90% 60% at 100% 100%, var(--color-plaster-lo), transparent 70%),
+      var(--color-plaster);
+  }
+  .press {
+    transition: transform 0.18s var(--ease-out-soft), background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  }
+  .press:active { transform: scale(0.965); }
+
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+}
+
+/* Scroll-linked motion: compositor-only, no JS, skipped for reduced motion and older browsers. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 5% entry 55%;
+    }
+    .hero-drift {
+      animation: hero-drift linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 100svh;
+    }
+    .hero-fade {
+      animation: hero-fade linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 70svh;
+    }
+    .drift-up {
+      animation: drift-up linear both;
+      animation-timeline: view();
+    }
+    .stack-card > .stack-inner {
+      animation: stack-recede linear both;
+      animation-timeline: view();
+      animation-range: exit -20% exit 60%;
+    }
+  }
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(28px); }
+}
+@keyframes hero-drift {
+  to { transform: scale(1.1) translateY(5%); }
+}
+@keyframes hero-fade {
+  to { opacity: 0; transform: translateY(-6%); }
+}
+@keyframes drift-up {
+  from { transform: translateY(70px); }
+  to { transform: translateY(-70px); }
+}
+@keyframes stack-recede {
+  to { transform: scale(0.92); filter: brightness(0.7); }
+}
+
+/* Sheets and menus built on <dialog>. */
+.sheet[open] { animation: sheet-in 0.42s var(--ease-out-soft); }
+.sheet[open]::backdrop { animation: fade-in 0.3s ease; background: rgb(20 19 18 / 0.55); backdrop-filter: blur(3px); }
+.sheet.closing { animation: sheet-out 0.24s ease-in forwards; }
+.sheet.closing::backdrop { animation: fade-out 0.24s ease-in forwards; background: rgb(20 19 18 / 0.55); }
+.overlay[open] { animation: fade-in 0.28s ease; }
+.overlay.closing { animation: fade-out 0.2s ease-in forwards; }
+
+@keyframes sheet-in { from { transform: translateY(100%); } }
+@keyframes sheet-out { to { transform: translateY(100%); } }
+@keyframes fade-in { from { opacity: 0; } }
+@keyframes fade-out { to { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet[open], .sheet.closing, .overlay[open], .overlay.closing,
+  .sheet[open]::backdrop, .sheet.closing::backdrop { animation-duration: 1ms; }
+  .press:active { transform: none; }
+}

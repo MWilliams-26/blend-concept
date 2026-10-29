@@ -1,0 +1,11 @@
+# Cloudflare Pages headers. Private concept: keep it out of search engines.
+/*
+  X-Robots-Tag: noindex, nofollow
+
+# Hashed build output and processed media never change in place.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/img/*
+  Cache-Control: public, max-age=2592000
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable

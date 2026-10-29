@@ -1,54 +1,83 @@
-# BLEND Men's Grooming & Spa: research notes (in progress)
+# BLEND Men's Grooming & Spa: research
 
-Status: Phase 1 and part of Phase 2 of the brief. Collected on Oct 29, 2026. Competitor research, review analysis, and the Lighthouse run are **not done yet**.
+Phase 1 of the brief, plus the evidence behind the audit. Collected Oct 29, 2026.
 
-Labels: **[V]** means verified on the source named, on Oct 29, 2026. **[3P]** means a third-party listing, not confirmed by BLEND. **[A]** means an assumption.
+Labels:
+- **[V]** I verified it myself on the source named, on Oct 29, 2026.
+- **[S]** It came from a search-result snippet that I didn't open.
+- **[3P]** It came from a third-party listing or aggregator; BLEND hasn't confirmed it.
+- **[A]** It's an assumption or inference.
 
 ## Identity
 
-- Names in use: "BLEND Men's Grooming & Spa" (site heading, Instagram, Facebook), "Blend Barbershop & Spa" (Square booking), "Blend Barbershop & Spa Grove st" (Square Online site title), "BLEND MGS" (TikTok, Linktree). [V]
-- Logo: white spaced wordmark "B L E N D" in a black square. The current site uses black and white throughout with grayscale editorial portraits. [V] https://www.blendmensgrooming.com/
-- The Square booking flow uses a warm beige/taupe button color (approximately #CBC2AD). [V] Square booking page
-- Instagram bio: "BLEND MGS J.C Where grooming meets experience. … Your first cut is $40 … Book at the link in bio." [V via search snippet] https://www.instagram.com/blendmgs
-- Site intro copy: "In the heart of Jersey City - Grove Street, BLEND brings healthy socializing, design, community to the traditional barbershop experience. Explore grooming services, facials, hot towel shaves and more. All crafted to help you feel, look, and live better." [V]
-- Square business description: "Locally owned barbershop and men's spa. Our barbers bring 20 plus years of experience. We tailor every service to you. … We are growing into a full men's spa. Join us as we build luxury services for our community in the near future." [V]
-- Facebook intro mentions planned wellness additions ("cold plunge, red li[ght]…"); these are future plans, not current services. [V via search snippet] https://www.facebook.com/p/BLEND-Mens-Grooming-Spa-61570351797286
+- **Names in use** [V]:
+  - "BLEND Men's Grooming & Spa" on the site heading, Instagram and Facebook.
+  - "Blend Barbershop & Spa" on Square booking.
+  - "Blend Barbershop & Spa Grove st" as the Square Online site title.
+  - "BLEND MGS" on TikTok and Linktree.
+- **Logo** [V]: the spaced wordmark "B L E N D" with "Men's grooming and spa" underneath. The site shows it as white on a black square. Source file: `12.15.2025_693f71da22b902.05285733.jpeg` on the site's CDN.
+- **The shop wall**: the shop has a plaster wall with raised "B L E N D" letters. Almost every gallery portrait was shot in front of it [V, from the photos]. It is BLEND's most recognizable visual and the basis of the concept's art direction.
+- **Instagram bio**: "BLEND MGS J.C Where grooming meets experience. … Your first cut is $40 … Book at the link in bio." [V via search snippet] https://www.instagram.com/blendmgs
+- **Site intro copy** [V]: "In the heart of Jersey City - Grove Street, BLEND brings healthy socializing, design, community to the traditional barbershop experience. Explore grooming services, facials, hot towel shaves and more. All crafted to help you feel, look, and live better."
+- **Square business description** [V]: "Locally owned barbershop and men's spa. Our barbers bring 20 plus years of experience. We tailor every service to you. … We are growing into a full men's spa. Join us as we build luxury services for our community in the near future."
+- **Planned wellness services**: the Facebook intro mentions future additions ("cold plunge, red li[ght]…"). These are plans, not current services. [V via search snippet] https://www.facebook.com/p/BLEND-Mens-Grooming-Spa-61570351797286
+- **Google listing attributes**: LGBTQ+ friendly, Latino-owned, Asian-owned. [V, Google Maps limited view]
+- **Personality**: the official copy is playful and self-deprecating. Adam is "the Gandalf of grooming — minus the robe, plus better delts". The beard service asks "Looking like a werewolf that spent 25 years in the wild?". The scissor cut promises "not that tight clipper look;)". It looks premium without being stiff. [V]
 
 ## Ownership and people
 
-- Co-owners: **Adam Lindo** and **Wander Polanco**. [V] https://www.blendmensgrooming.com/blendongrovest ("Co-owners Adam and Wander"), the story post "Adam Lindo - Co-owner", and Wander's Square bio ("As the owner of Blend Barbershop").
-- Staff listed in Square booking, with photos and bios [V] (Square staff step, reached from https://book.squareup.com/appointments/znbkzc490hng98/location/L4ZKN7Q990X2Z/services):
-  - **Adam Lindo**: Master Barber in all services, 20+ years; former bodybuilder and model, now an actor; "any hair type, any style, any texture".
-  - **Wander Polanco**: 16 years; master-level fades, scissor work, classic and modern styles; owner.
-  - **Eddie** ("The Bull"): Senior Barber, 15+ years; career in corrections from 2003, later licensed; classic fades, scissor cuts, skin fades, beard trims.
-  - **Eric Pagan**: Senior Barber, 10+ years; precision fades, all hair textures, enhancements, beard specialist.
-  - **Jonas Belmonte**: Senior Barber, 6+ years; born and raised in Jersey City; advanced training with educators in Italy and Montreal; detailed scissor cuts and fades.
-  - **Danny R**: Senior Barber, over a decade; detailed scissor work, custom styling, seamless fades.
-- An August 2026 Instagram reel also names "Dre"; Dre is not in Square booking. Reviews also mention Adam and Wander by name. Do not feature Dre without confirmation.
-- Staff photo URLs (Square CDN, 60px crops in the flow; originals at the same path without query): Adam `461ddf259d445f10b738dc826442f66a`, Danny `6caf44bbf33f30e0507e6c983bcbf625`, Eddie `b39c8b5770d6f16a7b5b0d8edc76065d`, Eric `c0b6376e4bbd19df50bef5dd773e6677`, Jonas `c61345670a85a682ad73bfb83b89033f`, Wander `98c91c1ed80b994b2e20456f70724bdd`, all under `https://appointments-production-f.squarecdn.com/files/<id>/original.jpeg`. Reuse status: not licensed; private-mockup use only, needs owner permission.
+- **Co-owners: Adam Lindo and Wander Polanco.** [V] Sources:
+  - https://www.blendmensgrooming.com/blendongrovest ("Co-owners Adam and Wander")
+  - The story post "Adam Lindo - Co-owner".
+  - Wander's Square bio ("As the owner of Blend Barbershop").
+- **Staff**: six barbers are listed in Square booking. Their bios were captured verbatim from the Square Online "Staff" tab at https://www.blendmensgrooming.com/s/appointments. [V]
+
+| Barber | Square title and experience | Specialties (own words) | Square `team_member_id` |
+|---|---|---|---|
+| Adam Lindo | Master Barber in all services, 20+ years | "any hair type, any style, any texture"; former bodybuilder and model, now an actor | `TMo8BdT1SftMjIEb` |
+| Wander Polanco | Owner, 16 years | "master-level fades, scissor work, and both classic and modern styles" | `TMtKpIhdbTwvqxTY` |
+| Eddie ("The Bull") | Senior Barber, 15+ years | Corrections career from 2003, later licensed; "classic fades and scissor cuts to skin fades and sharp beard trims" | `TMZwH1xCtKW8_QAW` |
+| Eric Pagan | Senior Barber, 10+ years | "Precision fades, all hair textures, clean enhancements, and beard specialist" | `TMmmWGtdlUfbInxC` |
+| Jonas Belmonte | Senior Barber, 6+ years | Born and raised in Jersey City; training "in places like Italy and Montreal"; "detailed scissor cuts and flawless fades" | `TM5PWXdeHQ9rkcVi` |
+| Danny R | Senior Barber, "over a decade" | "detailed scissor work, custom styling, and seamless fade transitions" | `TMR_LKnr1FGweYZu` |
+
+- **Dre**: an August 2026 Instagram reel also names "Dre", who is not in Square booking. Don't feature him without confirmation.
+- **Daniel/Danny**: reviews mention "Daniel" for fades. It's likely, but unconfirmed, that this is Danny R. [A]
+- **Staff photos**: these are on the Square CDN at `https://appointments-production-f.squarecdn.com/files/<id>/original.jpeg`:
+  - Adam: `461ddf259d445f10b738dc826442f66a`
+  - Danny: `6caf44bbf33f30e0507e6c983bcbf625`
+  - Eddie: `b39c8b5770d6f16a7b5b0d8edc76065d`
+  - Eric: `c0b6376e4bbd19df50bef5dd773e6677`
+  - Jonas: `c61345670a85a682ad73bfb83b89033f`
+  - Wander: `98c91c1ed80b994b2e20456f70724bdd`
 
 ## Location, contact, and hours
 
-- Address: the official site says "321 Grove St Ste 1, Jersey City, NJ 07302-5924". Instagram, Linktree, and Yelp say "Unit 1, 2nd Floor". The brief's "321 Grove Street, 2nd Floor" is consistent with this. Instagram says "near Grove Street PATH". [V]
-- Phone: **(551) 248-8999** on the official site and Square. Facebook and Yelp list **(201) 600-9730**. [V] Inconsistent.
-- Email: blendmgs@gmail.com. [V]
-- Hours: the official site and Square say **9:00 am–9:00 pm, every day** [V]. Yelp says 8 am–8 pm daily [3P]. hashtag.org says Mo–Th 8–20, Fr–Sa 10–20, Su 11–17 [3P]. Inconsistent.
-- Yelp attributes: by appointment only, wheelchair accessible, ADA-compliant restroom. [3P] The 2nd-floor location makes elevator access worth confirming.
-- Directions link used by the site: https://www.google.com/maps/dir/?api=1&destination=321+Grove+St+Ste+1+Jersey+City+NJ+07302-5924
-- Google place ID (from the reviews widget): ChIJvdw3w9lRwokRrkNZG-WwAqo. Write-review link: https://search.google.com/local/writereview?placeid=ChIJvdw3w9lRwokRrkNZG-WwAqo
+- **Address**: the official site and Square say "321 Grove St Ste 1, Jersey City, NJ 07302-5924". Google, Instagram, Linktree and Yelp say "2nd Floor" (Google: "321 Grove St 2nd Floor"). Instagram says "near Grove Street PATH". [V] The brief's address checks out. The concept uses "321 Grove St, Unit 1, 2nd Floor".
+- **Phone**: **(551) 248-8999** on the official site and Square; **(201) 600-9730** on Facebook and Yelp. [V] The listings disagree.
+- **Email**: blendmgs@gmail.com. [V]
+- **Hours**: the official site and Square say **9:00 am–9:00 pm, every day** [V]. Yelp says 8 am–8 pm daily [3P]. hashtag.org says Mo–Th 8–20, Fr–Sa 10–20, Su 11–17 [3P]. The listings disagree.
+- **Yelp attributes** [3P]: by appointment only, wheelchair accessible, ADA-compliant restroom. Elevator access to the 2nd floor still needs confirming.
+- **Directions link**: https://www.google.com/maps/dir/?api=1&destination=321+Grove+St+Ste+1+Jersey+City+NJ+07302-5924
+- **Google place ID**: ChIJvdw3w9lRwokRrkNZG-WwAqo
+  - Listing: https://www.google.com/maps/search/?api=1&query=Blend%20Men%E2%80%99s%20Grooming%20%26%20Spa&query_place_id=ChIJvdw3w9lRwokRrkNZG-WwAqo
+  - Write a review: https://search.google.com/local/writereview?placeid=ChIJvdw3w9lRwokRrkNZG-WwAqo
 
 ## Booking (Square Appointments)
 
-- Primary booking URL (the site's "Book now" button goes here): https://book.squareup.com/appointments/znbkzc490hng98/location/L4ZKN7Q990X2Z/services [V]
-- Linktree uses a legacy URL: https://app.squareup.com/appointments/book/znbkzc490hng98/L4ZKN7Q990X2Z/start
-- The Square flow has no staff-specific deep link: the URL stays at `/staff` when a barber is selected. "Book with [barber]" links should open the service flow and tell the visitor to pick that barber at the staff step. [V]
-- Journey observed on mobile, without submitting: Book now → service list → service page → Add → "Add more to your appointment?" → Next → Select staff → Next → availability (date and time) → details. That is about six taps before choosing a time. On Oct 29 with Wander: "No availability until Saturday, November 7." [V]
-- Service deep links, prices, and durations as shown on Square [V]:
+- **Primary booking URL** (the site's "Book now" button): https://book.squareup.com/appointments/znbkzc490hng98/location/L4ZKN7Q990X2Z/services [V]
+- **Legacy URL** used by Linktree: https://app.squareup.com/appointments/book/znbkzc490hng98/L4ZKN7Q990X2Z/start
+- **Barber deep links exist.** This corrects the earlier draft. The Square Online "Staff" tab's "Book now" buttons add `?team_member_id=<id>`.
+  - Adding that parameter to a **service** URL skips the staff step. After Add → Next, Square opens availability "with [barber]".
+  - Checked for all six barbers with Regular / Fade (for example "Regular / Fades Mens Haircut with Adam Lindo"). [V]
+  - On Oct 29, Adam showed "No availability within the next 30 days." [V]
+- **Journey without a barber link**, observed on mobile without submitting: Book now → service list → service page → Add → "Add more to your appointment?" → Next → Select staff → Next → availability (date and time) → details. That is about six taps before choosing a time. With a barber deep link plus a service URL it is Add → Next → availability. [V]
+- **Services**: all 12 service URLs were opened on Oct 29 and each resolved to the matching service [V]. Prices and durations are as Square shows them.
 
 | Service | Price | Duration | Square service URL suffix |
 |---|---|---|---|
 | Regular / Fades Mens Haircut | $60 & up | 45 min | 7MABTYRFPL54J2JQ7RKQV6BO |
-| Specialized Scissor Mens Haircut | Price varies (the Square Online menu shows $90 & up) | 1 hr+ | OMJHMQEZRGDINTRJ5UJR2V67 |
+| Specialized Scissor Mens Haircut | "Price varies" on Square; "$90 & up" on the Square Online menu | 1 hr+ | OMJHMQEZRGDINTRJ5UJR2V67 |
 | Haircut + Beard Trim / Shave | $75 & up | 1 hr 15 min | WGP46H4MEDAXMSFFZRG47T7E |
 | First Time Promo | $40 & up | 30 min | FXMB3SMZOTX7CB2BXEWJO2ZH |
 | Beard Service | $30 & up | 30 min | H72XR7POV42WRGF76RZNFWWA |
@@ -58,51 +87,199 @@ Labels: **[V]** means verified on the source named, on Oct 29, 2026. **[3P]** me
 | Hot towel | $10 & up | 10 min | W3JDTV4D6HT7EB355XJKCMS6 |
 | Transformation Add-On | $30 & up | 30 min | LF6F4YFBFJVXRYOP5EZNRJGV |
 | Hair Wash | $10 | 15 min | WAUINBOIEB5XBANYMOSGJDKB |
-| Children (under 12) | $40 regular, $60 fades, $90 scissor | 30 min | 4TBI7D6TMSU2D6MFSXANXKRB |
+| Children (under 12) | $40 regular, $60 fades, $90 scissor | 30 min+ | 4TBI7D6TMSU2D6MFSXANXKRB |
 
 Prefix: `https://book.squareup.com/appointments/znbkzc490hng98/location/L4ZKN7Q990X2Z/services/`
 
-Service details worth keeping:
-- Regular, fade, scissor, and combo cuts include a "3-day touch-up guarantee".
-- First Time Promo: regular or fade cut with any barber for $40. It excludes the specialized scissor cut, makeovers, and add-ons, and **a 20% gratuity is added**.
-- Full Service: hot towel, haircut, beard trim or shave, then a signature facial (black mask, eye mask, facial massage with mango butter, grapeseed oil, cocoa and shea butters). A phone call follows to take a down payment.
-- Transformation Add-On: in-depth consultation about lifestyle, routine, goals, and face shape, plus a hair wash. Recommended for first-time clients.
-- Facebook mentions "color enhancements" and kids' cuts; color is not in Square. Do not list it without confirmation.
+Service details (the full descriptions were captured from the Square Online booking page) [V]:
+- **Guarantee**: the regular, fade, scissor and combo cuts include a "3-day touch-up guarantee".
+- **First Time Promo**: a regular or fade cut with any barber for $40. It excludes the specialized scissor cut, makeovers and add-ons, and **a 20% gratuity is added**.
+- **Full Service**: hot towel, haircut, beard trim or shave, then a signature facial (black mask, eye mask, and a facial massage with mango butter, grapeseed oil, cocoa and shea butters). BLEND follows up with a phone call to take a down payment.
+- **Transformation Add-On**: an in-depth consultation about lifestyle, routine, hair goals and face shape, plus a hair wash. Recommended for first-time clients.
+- **Color**: Facebook mentions "color enhancements", but color isn't on Square. Don't list it without confirmation.
 
 ## Digital presence
 
-- Website: Square Online at https://www.blendmensgrooming.com/ with pages Home, Book (`/s/appointments`), Gallery (`/gallery`), BLEND On Grove Street (`/blendongrovest`), and Stories (`/s/stories`). [V]
-- Instagram: @blendmgs (active; reels from Aug 2026). Facebook links to @blendmensgroomingandspa, and a Jan 2025 post came from @blend.mgs. A May 9, 2026 site story says "We will no longer use instagram. Updates will be on here.", but Instagram posts continued afterward. Confirm the official handle.
-- TikTok: @blendmgs ("BLEND MGS | NJ JC"). https://www.tiktok.com/@blendmgs
-- Facebook: about 8 followers. Linktree: https://linktr.ee/blend.mgs ("We are hiring barbers", franchise inquiries, a children's book "Nile Goes to the Barbershop by Blend", and an L3 styling powder affiliate link).
-- **Blend on Grove St.**: a vertical comedy-drama series set inside the real shop, with the co-owners as characters. YouTube: https://youtube.com/@blend_on_grove_st. The Jan 14, 2026 story frames it as community-rooted: it promotes local businesses and gives local talent roles. This is a distinctive, authentic storytelling asset.
-- Personality: playful, self-deprecating humor in the official copy (Adam as "the Gandalf of grooming"; the beard service "Looking like a werewolf that spent 25 years in the wild?"; Adam's art-competition post). The brand is premium-looking but not stiff.
+- **Website**: Square Online at https://www.blendmensgrooming.com/ with these pages [V]:
+  - Home
+  - Book (`/s/appointments`)
+  - Gallery (`/gallery`)
+  - BLEND On Grove Street (`/blendongrovest`)
+  - Stories (`/s/stories`)
+- **Leftover template data**: the page JSON still carries Square template placeholders ("Market Street", "(555) 555-5555", "hi@mystore.com", 9–5 hours). They aren't rendered. [V]
+- **Instagram**: @blendmgs is active, with reels from Aug 2026.
+  - Facebook links to @blendmensgroomingandspa, and a Jan 2025 post came from @blend.mgs.
+  - A May 9, 2026 site story says "We will no longer use instagram. Updates will be on here." Instagram posts continued afterwards. Confirm the official handle.
+- **TikTok**: @blendmgs ("BLEND MGS | NJ JC"). https://www.tiktok.com/@blendmgs
+- **Facebook**: about 8 followers.
+- **Linktree**: https://linktr.ee/blend.mgs. It links to:
+  - "We are hiring barbers"
+  - Franchise inquiries
+  - A children's book, "Nile Goes to the Barbershop by Blend"
+  - An L3 styling powder affiliate link
+- **Blend on Grove St.**: a vertical comedy series set inside the real shop. The co-owners play characters and local talent fills out the cast.
+  - The site describes it as "A real barbershop in jersey city. A local comedy vertical series. A band of misfits & never ending stories" and "Real stories, real places, real energy." [V]
+  - YouTube: https://youtube.com/@blend_on_grove_st
+  - No competitor has anything like it.
 
 ## Reviews
 
-- Google: the widget shows 5.0 stars. Reviewers visible on Oct 29 include Matthew Valdes, Daniel Ramirez Zamorano, Louise Nunez, Antonio Lindo, Chris Hanna, Nate Brailer, Adam Ethan, Brendan Sees, Tom Miller, Santiago Pelaez, and Steven Pagan. Review text is not yet captured. Note that "Antonio Lindo" and "Steven Pagan" share surnames with staff; avoid featuring those reviews.
-- Yelp: 5.0 (2 reviews). One quote: "Adam did an excellent job. I went in for a haircut and came out looking and feeling good. It's a cool place in a great location, check it out! I highly recommend." [3P via MapQuest]
-- Poyst: 5.0 (22 reviews), with a summary mentioning Wander and Adam, precise detail-driven cuts, a relaxed vibe, and unhurried service. [3P]
-- Atly: describes a modern space with sleek finishes, plants, open windows, music, genuine conversation, "more like a lounge than a typical barbershop"; ranked #1 Barbershops in Downtown JC on Atly. [3P] https://www.atly.com/location/Blend-Barbershop-Spa
+### Sources and totals
 
-## Audit evidence so far (current site)
+| Source | Rating | Count | Notes |
+|---|---|---|---|
+| Google | 5.0 [V, Maps] | 87 in BLEND's own widget feed [V] (snapshot about Jan 2026); 94 per GlowUpFinder [3P] | Current count not visible signed-out. |
+| Yelp | 5.0 [V] | 2 recommended [V]; search shows "5 reviews" [S] | https://www.yelp.com/biz/blend-mens-grooming-and-spa-jersey-city |
+| Poyst | 5.0 | 22 [3P] | https://www.poyst.com/business/blend-mens-grooming-spa |
+| Atly | 8.9, "#1 in Barbershops in Downtown JC" | n/a [3P] | Describes plants, open windows, music, "more like a lounge than a typical barbershop". https://www.atly.com/location/Blend-Barbershop-Spa |
 
-Screenshots are in `docs/audit/`.
+**Widget caveat**: BLEND's site embeds a SociableKit Google reviews widget. Its public feed is at https://data.accentapi.com/feed/25645987.json and its config **shows only 4★ and 5★ reviews that have text**. The feed holds 30 reviews, all 5★, dated Oct 12, 2025 to Jan 12, 2026; it appears not to have refreshed since. The sample is positive by design. I couldn't check whether lower-rated reviews exist (Google Maps limited view hides reviews, and Google Search returned a CAPTCHA). [V]
 
-- No `<h1>` on the homepage; the business name is an `<h3>`. [V via DOM]
-- Viewport meta is `maximum-scale=1`, which blocks pinch-zoom (an accessibility issue). [V]
-- No LocalBusiness JSON-LD structured data. [V]
-- The meta description is "LOOKING FOR A BARBER NEAR YOU? -Jersey City By Grove street PATH station." [V]
-- Carousel images have empty `alt`. [V]
-- Mobile: the first screen is the header plus one grayscale portrait; the business name starts about 15% down the page. A very large blank gap sits above "Location & Hours" (about 10% of page height). The floating "Text us" pill covers intro text. No horizontal overflow at 390px (scrollWidth 390). [V]
-- No services, barbers, or prices on the homepage; they live only in the Book page and Square. [V]
-- The Gallery page holds about 70 professional photos (filenames `Blend_Barbershop_MGS_..._HAIRCUT_FADE_BEARDTRIM<n>`) under `https://87f6572a2ecef4e68947.cdn6.editmysite.com/uploads/b/87f6572a2ecef4e689475df030cb7a1eb1bf6a28183859818801345b8366c3bf/`. This is the best source of authentic imagery; reuse needs owner permission.
-- Stories include an unedited placeholder post ("Start writing your story here."). [V]
-- The footer reads "Have a look! Get access to useful tools and information." with no useful content, and links only Pinterest. [V]
-- Navigation timing (one run, orb network): DOMContentLoaded about 731 ms, load about 752 ms. This is not a field metric. A Lighthouse run is still to do.
+### Verbatim quotes used in the concept (Google, via the widget feed, all 5★) [V]
 
-## To do next
+1. Matthew V., Jan 12, 2026: "There was no sense of rush, but rather a care for perfection every time he moved his hands." (Wander)
+2. Daniel R. Z., Jan 7, 2026: "the barbers took the time to really listen and help me come up with the best style, not just a cut, but an outcome that actually fits me."
+3. Louise N., Jan 1, 2026: "Always a clean cut with Eric. Crazy beard work. Detail, precision, and consistency every time."
+4. Darren G., Nov 2, 2025: "Got my haircut on short notice the day of my wedding and it could not have gone better!"
+5. Tom M., Nov 27, 2025: "Adam was on it with pro opinions on what's right for my hair color & texture as well as my face shape & complexion."
+6. Max B., Nov 1, 2025: "Nice upstairs spot with the windows open, good music playing, super friendly guys."
 
-- Competitors: Balkan Barber, Tradesmen Barbershop, Sundays Barber Shop, and other Grove Street or downtown JC shops.
-- Capture Google review text; run Lighthouse on mobile; desktop audit details.
-- Then AUDIT.md, DESIGN_NOTES.md, ASSETS.md, and the build (React, TypeScript, Tailwind, Vite).
+### Other quotes, not used
+
+- Santiago P., Nov 21, 2025: "The room is small but very elegant, with calm music playing in the background while the barbers work their magic." He followed Eric from Eric's previous shop.
+- Ervis D., Oct 12, 2025: "I've been getting haircuts from Wander & Adam for a little over 2 years now."
+- Eddy G.: "The Rolls-Royce of barbers. Worth the wait!"
+- Yelp, via MapQuest [3P]:
+  - Nader E.: "come get a cut here from Danny or Adam. Vibes are chillen."
+  - Adrian G.: "Adam did an excellent job…"
+
+### Excluded on purpose
+
+- Antonio Lindo (5★, Dec 26, 2025) and Steven Pagan (5★, Nov 20, 2025, praising Eric) share surnames with staff. Neither is used.
+- 8 of the 30 feed reviews landed on Oct 12–13, 2025. That's consistent with a review-request push. [A]
+
+### Themes
+
+**Positive**:
+- Precision and unhurried attention, the most common theme.
+- Barbers who listen and consult on face shape and texture.
+- Chill music and genuine conversation ("therapeutic", "peaceful").
+- A clean, elegant upstairs room with the windows open.
+- Barbers are named often: Wander, Adam and Eric most; Eric for beards.
+- Kid-friendly, and recommended to people new to Jersey City.
+
+**Friction**: no negative review text was reachable. Mild signals:
+- "the room is small".
+- "worth the wait", which matches the limited availability seen on Square.
+- "worth the money", which signals premium pricing.
+
+## Competitors (downtown Jersey City)
+
+All homepages were fetched and rendered on Oct 29, 2026 [V unless marked]. None showed horizontal overflow at 390px. Google review counts come from Stormrage local-SEO pages [3P].
+
+| Shop | Address | Booking | Regular cut | Google | Yelp |
+|---|---|---|---|---|---|
+| **BLEND** | 321 Grove St, 2nd fl | Square | $60+ ($40 first visit) | 5.0 (87+) | 5.0 (2) |
+| Balkan Barber | 332 Barrow St | Acuity | $50–$60 | 4.9, 552 [3P] | 4.7 (120) [S] |
+| Tradesmen Barbershop | 297 Grove St (a block away) | Square | $60 | 4.9, 145 [3P] | unclaimed [S] |
+| Sundays Barber Shop | 423 Monmouth St; 510 Jersey Ave | Boulevard | $25–$75 range | 4.7 both; 251 (Jersey Ave) [3P] | 4.6 (89); 4.4 (16) |
+| ETIKET Barber & Lifestyle Co. | 335 Grove St (same block) | Shortcuts | from $50 | 4.6, 270 [3P] | 3.8 (64) [S] |
+| International Styles | 278 First St (est. 2001) | Booksy | $55 | 4.3 | 4.0 (57) [S] |
+
+### Homepage audit grid
+
+| Shop | `<h1>` | Business JSON-LD | Zoom disabled | Prices on homepage | Barbers featured | Builder |
+|---|---|---|---|---|---|---|
+| BLEND | ✗ | ✗ | `maximum-scale=1` | ✗ | ✗ | Square Online |
+| Balkan | ✓ | ✗ | no | ✓ full list | names + per-barber booking | Webflow |
+| Tradesmen | 3 identical | ✗ | no | ✗ | 1 bio, 2 names | Duda-style |
+| Sundays | ✓ (generic "Our Services") | ✓ BarberShop ×2, FAQPage, OfferCatalog | no | ✓ ranges | ✓ rich bios | Wix |
+| ETIKET | visually hidden logo text | ✗ | no | ✗ | ✗ | Shopify |
+| International Styles | ✗ | ✓ BarberShop | no | ✓ full list | ✗ | Custom |
+
+### What each does well, and where it falls short
+
+**Balkan Barber** (https://www.balkanbarbershop.com/). Heritage craft positioning: "A PROPER CUT TAKES TIME".
+- Strengths:
+  - Full price list on the homepage.
+  - "4.9 rating from 500+ reviews" linked to Google.
+  - A booking link per barber.
+  - A useful FAQ.
+- Weaknesses:
+  - The FAQ address (389 Grove St) contradicts the footer (332 Barrow St).
+  - One barber is labelled "AI" ("Book with AI"), probably "Al".
+  - No bios, all 27 images have empty `alt`, and there's no JSON-LD.
+
+**Tradesmen Barbershop** (https://www.tradesmenbarbershopjc.com/). Traditional and professional, led by master barber John Gallo ("over 30 years", "SINCE 1996").
+- Strengths: about 10 Book buttons, all going to Square, and a clear cancellation policy.
+- Weaknesses:
+  - The root URL redirects to separate desktop, tablet and mobile pages.
+  - No prices on the site.
+  - Phone numbers are broken or inconsistent.
+  - A "Tradesman" typo.
+  - 2 of 44 images have alt text.
+  - No reviews on the site.
+
+**Sundays Barber Shop** (https://www.sundaysbarbershop.com/). Warm heritage story (the name honors the founder's grandfather).
+- Strengths: the best staff storytelling in the set, with 13 barbers plus the shop dog, levels, schedules and favorite local spots. Also the best structured data.
+- Weaknesses:
+  - A 2.7 MB homepage HTML.
+  - A generic h1.
+  - A duplicated bio.
+  - Price ranges too wide to be useful.
+  - The Jersey Ave listing still carries "Virile Barber & Shop" reviews.
+
+**ETIKET** (https://etiket.life/). Streetwear and lifestyle ("BE UNDENIABLY GOOD.") with Shopify retail. It's BLEND's nearest premium neighbor and sells a Black Mask ($25) and Face Mask ($20) that overlap BLEND's spa add-ons.
+- Strengths: attributed testimonials and a clear booking button.
+- Weaknesses: no prices or barbers on the homepage, a hidden h1, a mistyped phone number, and "Sold Out" staff picks.
+
+**International Styles** (https://www.jcbarbers.com/). Classic ("Tradition meets precision").
+- Strengths: full prices, policies and BarberShop JSON-LD.
+- Weaknesses: no h1, no barbers, and reviews and booking that depend on JavaScript.
+
+Noted but not profiled: Sandy 09 Barbershop (258 Newark Ave), D&G Barbershop (30 Coles St) [S]. I found no Balkan Barber location on Newark Ave.
+
+### Positioning takeaways
+
+1. **The Grove Street block is crowded at the same price.** Tradesmen ($60, a block away) and ETIKET (from $50, same block) compete directly. Price won't set BLEND apart; people, atmosphere and the spa services can.
+2. **Only Sundays tells staff stories well**, and nobody pairs those stories with a one-tap booking link per barber. BLEND can, because Square supports `team_member_id`.
+3. **Nobody owns "grooming experience".** Balkan and International Styles sell tradition, Tradesmen sells professionalism, ETIKET sells lifestyle retail. BLEND's own line, "Where grooming meets experience", plus its facial and hot-towel menu, is open territory.
+4. **BLEND has assets no one else has**: a consistent professional portrait series on its own branded wall, a 5.0 rating, and its own comedy series.
+5. **Everyone's technical basics are weak** (h1, alt text, structured data). Doing them properly is a cheap edge.
+
+## Target audience [A, inferred from location, reviews and services]
+
+- Downtown JC residents and PATH commuters (Grove Street station) who book on their phones, often from Instagram or Google Maps.
+- First-time visitors comparing shops on the Grove Street block. The $40 first-visit promo targets them.
+- Regulars loyal to one barber. Reviews name barbers constantly, and clients follow Eric between shops.
+- Parents (kids' cuts and kid-friendly reviews).
+- Men curious about facials and hot-towel services, a growth area the business says it is "growing into".
+
+## Audit evidence (current site)
+
+Screenshots are in `docs/audit/`. Findings and priorities are in `AUDIT.md`.
+
+- **Headings**: no `<h1>` on the homepage; the business name is an `<h3>`. [V, DOM]
+- **Zoom**: the viewport meta is `maximum-scale=1`, which blocks pinch-zoom in Android Chrome. Lighthouse flags it. [V]
+- **Structured data**: no LocalBusiness JSON-LD. [V]
+- **Meta description**: "LOOKING FOR A BARBER NEAR YOU? -Jersey City By Grove street PATH station." [V]
+- **Images**: carousel images have empty `alt`. [V]
+- **Mobile layout** [V]:
+  - The first screen is the header plus one grayscale portrait; the business name starts about 15% down the page.
+  - A large blank gap sits above "Location & Hours".
+  - The floating "Text us" pill covers intro text.
+  - The reviews iframe is about 1,931px tall.
+  - No horizontal overflow at 390px.
+- **Content**: no services, barbers or prices on the homepage. [V]
+- **Gallery**: about 70 professional photos on the Gallery page; reuse needs owner permission.
+- **Stories**: an unedited placeholder post ("Start writing your story here."). [V]
+- **Footer**: "Have a look! Get access to useful tools and information." Its only link is Pinterest. [V]
+- **Lighthouse 13.6**: orb network, default simulated throttling (Moto G Power profile on mobile), 2 mobile runs and 1 desktop run.
+
+| Run | Perf | A11y | Best pr. | SEO | FCP | LCP | TBT | CLS | Weight |
+|---|---|---|---|---|---|---|---|---|---|
+| Mobile #1 | 26 | 82 | 54 | 100 | 2.6 s | 27.9 s | 6,500 ms | 0.134 | 4,545 KiB |
+| Mobile #2 | 28 | 82 | 54 | 100 | 2.2 s | 23.3 s | 5,120 ms | 0.134 | 4,552 KiB |
+| Desktop | 41 | 83 | 54 | 100 | 0.6 s | 5.0 s | 510 ms | 0.147 | 4,602 KiB |
+
+Failed accessibility audits: `color-contrast`, `frame-title` (the reviews iframe), `meta-viewport` and `target-size`. Failed best-practice audits: third-party cookies, console errors, a deprecated API, and Issues-panel warnings. These are lab numbers, not field data.
